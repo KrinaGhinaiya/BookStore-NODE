@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body{
+        background-color: #9B7EBD;
+    }
+    .editing{
+        font-size: 30px;
+
+    }
+    .edit{
+        font-size: 30px;
+        background-color: #3B1E54;
+        color: white;
+        border-radius: 5px;
+        padding: 6px;
+    }
+    .color{
+        background-color: #D4BEE4;
+    }
+</style>
+</head>
+<body>
+    <a href="/book">Back</a>
+
+<h1 align="center">Edit Book Page</h1>
+
+<form method="post" action="/book/updateBook/<%= book.id %>">
+    <table align="center" border="1" class="editing">
+        
+        <tr >
+            <td class="color">Bname:</td>
+            <td><input type="text" name="bname"  value="<%= book.bname %>" class="editing color" ></td>
+        </tr>
+        <tr>
+            <td class="color">Author:</td>
+            <td><input type="text" name="author" value="<%= book.author %>" class="editing color"></td>
+        </tr>
+        <tr>
+            <td class="color">Language:</td>
+            <td><input type="text" name="lang" value="<%= book.lang %>" class="editing color"></td>
+        </tr>
+        <tr>
+            <td class="color">Title:</td>
+            <td><input type="text" name="title" value="<%= book.title %>" class="editing color"></td>
+        </tr>
+        <tr>
+            <td class="color">Price:</td>
+            <td><input type="number" name="price" value="<%= book.price %>" class="editing color" ></td>
+        </tr>
+        <tr>
+            <td class="color">Year:</td>
+            <td><input type="number" name="year" value="<%= book.year %>" class="editing color"></td>
+        </tr>
+        <tr>
+            <td class="color">Pages:</td>
+            <td><input type="number" name="page" value="<%= book.page %>" class="editing color"></td>
+        </tr>
+            <tr>
+                <td class="color"> Button</td>
+                <td><input type="submit" value="Update Book"  class="edit"></td>
+            </tr>
+    </table>
+</body>
+</html>
+
+
+
